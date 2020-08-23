@@ -1,0 +1,39 @@
+﻿@model SalesWebMvc.Models.Seller 
+    <!-- classe por parametro -->
+
+@{
+    ViewData["Title"] = "Novo";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<h4>Vendedor</h4>
+<hr /> <!-- Quebra de linha -->
+<div class="row">
+    <!-- Vai garantir que a linha vai ocupar toda a tela -->
+    <div class="col-md-4">
+        <!-- Vai ocupar 1/3 da tela, pois o bootstrap divide em 12 partes, e estamos pegando 4 partes-->
+        <form asp-action="Create">
+            <div class="form-group">
+                <label asp-for="Name" class="control-label">Nome</label>
+                    <input asp-for="Name" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="BirthDate" class="control-label">Data Nascimento</label>
+                    <input asp-for="BirthDate" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="BaseSalary" class="control-label">Salário Base</label>
+                    <input asp-for="BaseSalary" class="form-control" />
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Salvar" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+
+</div>
