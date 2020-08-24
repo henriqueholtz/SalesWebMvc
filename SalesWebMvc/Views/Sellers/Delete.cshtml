@@ -1,0 +1,56 @@
+﻿@model SalesWebMvc.Models.Seller
+@{
+    ViewData["Title"] = "Deletar";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<h3>Tem certwza que deseja deletar este item vendedor?</h3>
+
+<div>
+    <h4>Vendedor</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            <!-- nome do campo -->
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd>
+            <!-- valor do campo-->
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            <!-- nome do campo -->
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+        <dd>
+            <!-- valor do campo-->
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            <!-- nome do campo -->
+            @Html.DisplayNameFor(model => model.BirthDate)
+        </dt>
+        <dd>
+            <!-- valor do campo-->
+            @Html.DisplayFor(model => model.BirthDate)
+        </dd>
+
+        <dt>
+            <!-- nome do campo -->
+            @Html.DisplayNameFor(model => model.BaseSalary)
+        </dt>
+        <dd>
+            <!-- valor do campo-->
+            @Html.DisplayFor(model => model.BaseSalary)
+        </dd>
+    </dl>
+
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" /> <!-- Campo oculto para enviar o comando delete -->
+        <input type="submit" value="Delete" class="btn btn-danger" />
+        <a asp-action="Index">Voltar</a>
+    </form>
+</div>
