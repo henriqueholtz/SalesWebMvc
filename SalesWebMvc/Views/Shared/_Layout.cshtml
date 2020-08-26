@@ -4,7 +4,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - SalesWebMvc</title>
-
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="shortcut icon" href="images/favicon.ico">
     <environment include="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap-cyborg.css" />
         <link rel="stylesheet" href="~/css/site.css" />
@@ -26,11 +27,10 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">Vendas</a>
+                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">Início</a>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a asp-area="" asp-controller="Home" asp-action="Index">Início </a></li>
                     <li><a asp-area="" asp-controller="Departments" asp-action="Index">Departamentos </a></li>
                     <li><a asp-area="" asp-controller="Sellers" asp-action="Index">Vendedores</a></li>
                     <li><a asp-area="" asp-controller="SalesRecords" asp-action="Index">Reg. Vendas</a></li>
@@ -43,11 +43,11 @@
 
     <partial name="_CookieConsentPartial" />
 
-    <div class="container body-content">
+    <div class=" container body-content">
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; 2020 - Henrique Holtz</p>
+            <p class="row justify-content-center">&copy; 2020 - Henrique Holtz</p>
         </footer>
     </div>
 
